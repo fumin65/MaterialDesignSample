@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jp.fumin.materialsample.parallax.ObservableScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:overScrollMode="never"
+	android:id="@+id/scroll_view">
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<ImageView
+			android:id="@+id/background_image"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:adjustViewBounds="true"
+			android:src="@drawable/dora"/>
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:id="@+id/content_area"
+			android:background="#ffffff"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:text="@string/content_text"
+				android:padding="10dp"
+				android:textSize="30sp"/>
+
+		</LinearLayout>
+
+		<android.support.v7.widget.Toolbar
+			android:id="@+id/toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:minHeight="?attr/actionBarSize"
+			android:background="?attr/colorPrimary"
+			/>
+
+	</FrameLayout>
+
+</jp.fumin.materialsample.parallax.ObservableScrollView>
