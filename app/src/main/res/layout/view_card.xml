@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+	xmlns:card_view="http://schemas.android.com/apk/res-auto"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	card_view:cardCornerRadius="4dp">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/card_view_image_height">
+
+			<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:scaleType="centerCrop"
+				android:src="@drawable/dora"/>
+
+			<TextView
+				android:layout_gravity="bottom"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/card_view_title_height"
+				android:background="@color/card_title_background"
+				android:textColor="@color/card_title_color"
+				android:gravity="center_vertical"
+				android:paddingLeft="10dp"
+				android:text="@string/card_title"/>
+
+		</FrameLayout>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/content_text"/>
+
+	</LinearLayout>
+
+</android.support.v7.widget.CardView>

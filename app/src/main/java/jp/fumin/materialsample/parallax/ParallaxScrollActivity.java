@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Display;
+import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -31,6 +32,9 @@ public class ParallaxScrollActivity extends ActionBarActivity {
 
 		setToolbarAlpha(0);
 		setSupportActionBar(mToolbar);
+
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setHomeButtonEnabled(true);
 
 		final ObservableScrollView scrollView = (ObservableScrollView) findViewById(R.id.scroll_view);
 		scrollView.setScrollChangeListener(new ObservableScrollView.OnScrollChangeListener() {
@@ -64,5 +68,16 @@ public class ParallaxScrollActivity extends ActionBarActivity {
 			int color = getWindow().getStatusBarColor();
 			getWindow().setStatusBarColor(Color.argb(alpha, Color.red(color), Color.green(color), Color.blue(color)));
 		}
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+
+		if (item.getItemId() == android.R.id.home) {
+			finish();
+			return true;
+		}
+
+		return super.onOptionsItemSelected(item);
 	}
 }
